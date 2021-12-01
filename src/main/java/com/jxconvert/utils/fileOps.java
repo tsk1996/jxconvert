@@ -8,11 +8,25 @@ import java.time.format.DateTimeFormatter;
 public class fileOps {
     public void generateOPFile(String content,String name) throws IOException {
         String def_filepath="src/main/resources/generatedFiles/";
-
-//        File file=new File(def_filepath+name);
         FileWriter myWriter = new FileWriter(def_filepath+name);
         myWriter.write(content);
         myWriter.close();
+    }
+
+    public String fileValidate(String filename){
+        File file=new File(filename);
+        if(file.exists()){
+            if(file.isFile()){
+
+            }else{
+                System.err.println("Source filepath mismatch");
+                System.exit(1);
+            }
+        }else{
+            System.err.println("Source file does not exist");
+            System.exit(1);
+        }
+        return filename;
     }
 
     public String readFile(InputStream in) throws IOException {
