@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <employees>
+    <name>Ram</name>
+    <email>ram@gmail.com</email>
+    <age number="true">23</age>
+    <phoneNumbers>
+      <type>work</type>
+      <value>555-1111</value>
+    </phoneNumbers>
+    <phoneNumbers>
+      <type>home</type>
+      <value>333-9087</value>
+    </phoneNumbers>
+  </employees>
+  <employees>
+    <name>Shyam</name>
+    <email>shyam23@gmail.com</email>
+    <age number="true">28</age>
+    <phoneNumbers>
+      <type>work</type>
+      <value>890-1234</value>
+    </phoneNumbers>
+    <phoneNumbers>
+      <type>home</type>
+      <value>786-4567</value>
+    </phoneNumbers>
+  </employees>
+  <employees>
+    <name>John</name>
+    <email>john@gmail.com</email>
+    <age number="true">33</age>
+    <phoneNumbers array="true">
+      <type>work</type>
+      <value>045-2345</value>
+    </phoneNumbers>
+  </employees>
+  <employees>
+    <name>Bob</name>
+    <email>bob32@gmail.com</email>
+    <age number="true">41</age>
+    <phoneNumbers>
+      <type>work</type>
+      <value>456-789</value>
+    </phoneNumbers>
+    <phoneNumbers>
+      <type>home</type>
+      <value>457-8643</value>
+    </phoneNumbers>
+  </employees>
+</root>
