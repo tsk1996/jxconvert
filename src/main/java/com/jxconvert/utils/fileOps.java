@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 
 public class fileOps {
     public void generateOPFile(String content,String name) throws IOException {
-        String def_filepath="src/main/resources/generatedFiles/";
+        String def_filepath="data/generatedFiles/";
         FileWriter myWriter = new FileWriter(def_filepath+name);
         myWriter.write(content);
         myWriter.close();
@@ -16,9 +16,7 @@ public class fileOps {
     public String fileValidate(String filename){
         File file=new File(filename);
         if(file.exists()){
-            if(file.isFile()){
-
-            }else{
+            if (!file.isFile()){
                 System.err.println("Source filepath mismatch");
                 System.exit(1);
             }

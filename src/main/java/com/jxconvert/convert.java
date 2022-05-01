@@ -3,28 +3,32 @@ package com.jxconvert;
 import com.jxconvert.utils.fileOps;
 import com.jxconvert.utils.toJson;
 import com.jxconvert.utils.toXML;
-
 import java.io.IOException;
 
 
-public class mainClass {
-    public static void main(String[] args) throws IOException {
+public class convert {
+    public static void main(String[] args) throws IOException{
         fileOps fp = new fileOps();
         Integer option = optionSelect(args);
 
         String filepath = fp.fileValidate(args[1]);
-
+        String result = "";
         switch (option) {
             case 1:
                 toXML obj1 = new toXML();
-                System.out.println(obj1.convertToXML(filepath));
+                result = obj1.convertToXML(filepath).trim();
+//                fp.generateOPFile(result, "xmlOp.xml");
+                System.out.println(result);
             case 2:
                 toJson obj2 = new toJson();
-                System.out.println(obj2.convertToJson(filepath));
-            default:
-                System.err.println("Switch case error");
+                result = obj2.convertToJson(filepath).trim();
+//                fp.generateOPFile(result, "jsonOp.json");
+                System.out.println(result);
+//            default:
+//                System.err.println("Switch case error");
         }
     }
+
 
     private static Integer optionSelect(String[] args) {
         int option = 0;
