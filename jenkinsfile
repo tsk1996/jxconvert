@@ -17,7 +17,11 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                bat "mvn deploy"
+            }
+        }
+        stage('Release') {
+            steps {
+                echo 'Releasing....'
             }
         }
     }
