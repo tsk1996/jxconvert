@@ -5,6 +5,12 @@ pipeline {
         jdk 'jdk8' 
     }
     stages {
+        stage('Init') {
+            steps{
+                echo "PATH = ${PATH}"
+                echo "M2_HOME = ${M2_HOME}"
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
@@ -20,8 +26,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                echo "PATH = ${PATH}"
-                echo "M2_HOME = ${M2_HOME}"
             }
         }
         stage('Release') {
