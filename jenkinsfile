@@ -7,6 +7,8 @@ pipeline {
     stages {
         stage('Init') {
             steps{
+                bat "mvn -v"
+                bat "java -version"
                 echo "PATH = ${PATH}"
                 echo "M2_HOME = ${M2_HOME}"
             }
