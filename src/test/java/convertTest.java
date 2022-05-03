@@ -14,12 +14,12 @@ public class convertTest {
         convert.main(args);
     }
 
-//    @Test
-//    public void json2xmlTest() throws IOException {
-//        String jsonSource = "data/jsonSample.json";
-//
-//        String[] args = {"json", jsonSource};
-//
-//        convert.main(args);
-//    }
+    @Test
+    public void json2xmlTest() throws IOException {
+        String jsonSource = "data/jsonSample.json";
+
+        String[] args = {"json", jsonSource};
+
+        convert.main(args);
+    }
 }

@@ -19,13 +19,15 @@ public class convert {
                 result = obj1.convertToXML(filepath).trim();
 //                fp.generateOPFile(result, "xmlOp.xml");
                 System.out.println(result);
+                break;
             case 2:
                 toJson obj2 = new toJson();
                 result = obj2.convertToJson(filepath).trim();
 //                fp.generateOPFile(result, "jsonOp.json");
                 System.out.println(result);
-//            default:
-//                System.err.println("Switch case error");
+                break;
+            default:
+                System.err.println("Switch case error");
         }
     }
 
